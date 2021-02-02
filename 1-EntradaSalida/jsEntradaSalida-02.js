@@ -8,6 +8,7 @@ function mostrar()
 
 	let mensaje;
 	mensaje = prompt ("Ingrese su nombre")
+	//dentro de los parentesis se ecribe el mensaje para el usuario
 	/*undefined es el error que sale cuando la variable no a sido definida*/ 
 
 	
