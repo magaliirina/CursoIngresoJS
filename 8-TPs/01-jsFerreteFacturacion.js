@@ -41,6 +41,8 @@ function Promedio ()
     precioTres = parseInt(precioTres);
 
     //promedio: necesita ( ) para que de el resultado
+    // para redondear un numero se usa variable.tofixed(cantidad de numeros despues del
+    // punto)
 
     promedio = (precioUno + precioDos + precioTres) / 3;
 
@@ -54,6 +56,8 @@ function PrecioFinal ()
     let precioDos;
     let precioTres;
     let suma;
+    let aumento;
+    let iva = 21;
     let precioIva;
 
     precioUno = txtIdPrecioUno.value;
@@ -67,7 +71,8 @@ function PrecioFinal ()
 
     suma = precioUno + precioDos + precioTres;
 
-    precioIva = suma * 121 / 100;
+    aumento = suma * iva / 100;
+    precioIva = aumento + suma;
 
     alert("Los productos sumarian " + precioIva + " con el 21% de IVA.");
 }

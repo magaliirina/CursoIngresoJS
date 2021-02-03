@@ -7,11 +7,18 @@ function mostrarAumento()
 {
 	let importe;
 	let resultado;
+	let aumento;
+	let porcentaje = 10;
+	let importeAumentado;
+	//forma optima porque es escalable (puedo cambiar el porcentaje)
 
 	importe = txtIdSueldo.value;
 	importe = parseInt(importe);
 
-	resultado = importe * 1.1
+	aumento = importe * porcentaje / 100;
 
-	txtIdResultado.value = resultado
+	importeAumentado = importe + aumento;
+
+
+	txtIdResultado.value = importeAumentado;
 }
