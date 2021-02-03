@@ -15,6 +15,7 @@ function SacarResto()
 	divisor = txtIdNumeroDivisor.value;
 	divisor = parseInt(divisor);
 
+	//operador modulo te entrega el resto de una division
 	resto = (dividendo) % (divisor);
 
 	alert("El resto es " + resto);
