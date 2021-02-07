@@ -8,10 +8,18 @@ function mostrar()
 		alert("Mayor de edad");
 	}
 
-	if(edad <= 18){
+	//Esta condicion no es optima ya que se evalua dos veces la condicion
+	// if(edad <= 18){
+	// 	alert("Menor de edad");
+	// }
+	// alert("fin");
+
+
+	//else (si no) no necesita otra condicion, se ejecuta cuando el if no lo hace
+	else {
 		alert("Menor de edad");
 	}
-	alert("fin");
+	alert("Fin");
 
 
 }//FIN DE LA FUNCIÓN
