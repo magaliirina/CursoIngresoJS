@@ -4,6 +4,7 @@ function mostrar()
 
 	edad = parseInt(txtIdEdad.value);
 
+	//if (edad < 18) para preguntar primero si es menor
 	if( edad >= 18){
 		alert("Mayor de edad");
 	}
