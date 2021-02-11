@@ -56,7 +56,6 @@ function CalcularPrecio ()
                 }
                 else
                 {
-
                     descuento= 20;
                 }
             }
