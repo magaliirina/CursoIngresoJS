@@ -2,8 +2,8 @@ function mostrar()
 {
 	let destino;
 	let temporada;
-	let descuento;
-	let aumento;
+	let descuento=0;
+	let aumento=0;
 	let precioFinal;
 	const precio = 15000;
 
@@ -43,15 +43,12 @@ function mostrar()
 				/*aumento= aumento*precio/100;
 				precioFinal= precio + aumento;*/
 			}
-			else{
-				aumento= 0;
-			}
 			break;
 			//Cierro Otoño-Primavera
 	}
 
 	
-	if (aumento >= 0){
+	if (aumento != 0){
 		//alert(aumento);
 		aumento= precio*aumento/100;
 		//alert(precio);
@@ -61,6 +58,11 @@ function mostrar()
 	else if (descuento != 0){
 		descuento= precio*descuento/100;
 		precioFinal= precio-descuento;
+	}
+	else{
+		//Habia un errror en la declaracion de variables
+		//no estaban igualadas a nada por lo que tiraba NaN
+		precioFinal=precio;
 	}
 	
 	alert("Precio final " +precioFinal);
