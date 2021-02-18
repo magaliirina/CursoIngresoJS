@@ -25,8 +25,65 @@ function CalcularPrecio ()
 
     marcaLampara = Marca.value;
 
+    switch(cantidadLamparitas){
+        case 1:
+        case 2:
+            descuento=0;
+            break;
+        case 3:
+            switch(marcaLampara){
+                case "ArgentinaLuz":
+                    descuento=15;
+                    break;
+                case "FelipeLamparas":
+                    descuento=10;
+                    break;
+                default:
+                    descuento=0;
+                //alert (descuento);
+                break;
+            }
+        case 4:
+            switch(marcaLampara){
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    descuento=25;
+                    break;
+                default:
+                    descuento=20;
+                    break;
+            }
+        case 5:
+            switch(marcaLampara){
+                case "ArgentinaLuz":
+                    descuento=40;
+                    break;
+                default:
+                    descuento=30;
+                    break;
+            }
+        default:
+            descuento=50;
+            break;
+    }
+
+    precio= cantidadLamparitas*precioUnitarioLampara;
+    porcentaje= precio*descuento/100;
+    precioFinal= precio-porcentaje;
+
+    if(precioFinal>= 120){
+        impuesto= precioFinal*10/100;
+        precioImpuesto= precioFinal+impuesto;
+        alert("IIBB Usted pago " + impuesto + " de impuesto");
+        txtIdprecioDescuento.value=precioImpuesto;
+    }
+    else{
+        txtIdprecioDescuento.value=precioFinal;
+    }
+
+
     
-    if(cantidadLamparitas>5)
+   /* if(cantidadLamparitas>5)
     {
         descuento= 50;
     }
@@ -96,6 +153,6 @@ function CalcularPrecio ()
     }
     else{
         txtIdprecioDescuento.value=precioFinal;
-    }
+    }*/
 
 }//Fin de la funcion
